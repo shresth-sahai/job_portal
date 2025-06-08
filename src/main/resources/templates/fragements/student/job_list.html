@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.0038.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jobs</title>
 </head>
 <body>
-
+<div layout:fragment="content">
+    <h2>Available Jobs</h2>
+    <div class="alert alert-info">
+        This is a demo. In a real app, you would list jobs here.
+    </div>
+</div>
 </body>
 </html>

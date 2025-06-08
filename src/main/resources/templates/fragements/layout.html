@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Student Career Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/[email protected]/dist/css/bootstrap.min.css">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="container mt-4">
+    <div layout:fragment="content"></div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/[email protected]/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
